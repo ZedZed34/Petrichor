@@ -9,24 +9,56 @@
 <section class="container about-content">
 	<div class="about-grid">
 		<div class="about-image">
-			<svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<rect width="400" height="500" fill="#EADDDB" rx="10"/>
-				<circle cx="200" cy="250" r="100" stroke="var(--color-primary)" stroke-width="4"/>
-				<path d="M150,300 Q200,350 250,300" stroke="var(--color-accent)" stroke-width="4" fill="none"/>
+			<svg
+				viewBox="0 0 400 500"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<rect width="400" height="500" fill="#EADDDB" rx="10" />
+				<circle
+					cx="200"
+					cy="250"
+					r="100"
+					stroke="var(--color-primary)"
+					stroke-width="4"
+				/>
+				<path
+					d="M150,300 Q200,350 250,300"
+					stroke="var(--color-accent)"
+					stroke-width="4"
+					fill="none"
+				/>
 			</svg>
 		</div>
 		<div class="about-text">
 			<h2>Crafting with Intention</h2>
-			<p>Aura Handcrafted was born out of a passion for creating wearable art that empowers and inspires. Every piece of jewelry is meticulously hand-forged, polished, and finished in our cozy studio.</p>
-			
-			<p>We source our materials ethically, ensuring that our metals and stones have minimal impact on the earth. The "rose tan" aesthetic reflects our commitment to natural, earthy warmth and timeless elegance.</p>
+			<p>
+				Aura Handcrafted was born out of a passion for creating wearable
+				art that empowers and inspires. Every piece of jewelry is
+				meticulously hand-forged, polished, and finished in our cozy
+				studio.
+			</p>
 
-			<p>Our goal is to create heirloom-quality pieces that you can wear every day. Thank you for supporting independent artisans and slow fashion.</p>
-			
+			<p>
+				We source our materials ethically, ensuring that our metals and
+				stones have minimal impact on the earth. The "rose tan"
+				aesthetic reflects our commitment to natural, earthy warmth and
+				timeless elegance.
+			</p>
+
+			<p>
+				Our goal is to create heirloom-quality pieces that you can wear
+				every day. Thank you for supporting independent artisans and
+				slow fashion.
+			</p>
+
 			<a href="/shop" class="btn">View Collection</a>
 		</div>
 	</div>
 </section>
+sdfsadfasdf
+
+<!-- dfsfsadfsdaf -->
 
 <style>
 	.page-header {
@@ -54,7 +86,7 @@
 		width: 100%;
 		border-radius: 10px;
 		overflow: hidden;
-		box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 	}
 
 	.about-image svg {
@@ -87,3 +119,4 @@
 		}
 	}
 </style>
+ddasdfasdfasdf
