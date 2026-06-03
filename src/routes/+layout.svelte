@@ -1,11 +1,15 @@
 <script lang="ts">
 	import '../app.css';
+	import logo from '$lib/assets/PetrichorLogo.jpg';
 	let { children } = $props();
 </script>
 
 <header>
 	<div class="header-container">
-		<a href="/" class="logo">Aura Handcrafted</a>
+		<a href="/" class="logo">
+			<img src={logo} alt="Petrichor Logo" class="logo-img" />
+			Petrichor
+		</a>
 		<nav>
 			<a href="/">Home</a>
 			<a href="/shop">Shop</a>
@@ -20,7 +24,7 @@
 </main>
 
 <footer>
-	<p>&copy; {new Date().getFullYear()} Aura Handcrafted Jewelry. All rights reserved.</p>
+	<p>&copy; {new Date().getFullYear()} Petrichor Handmade Jewelry. All rights reserved.</p>
 </footer>
 
 <style>
@@ -49,6 +53,15 @@
 		color: var(--color-text);
 		text-decoration: none;
 		letter-spacing: 0.05em;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo-img {
+		height: 2.5rem;
+		width: auto;
+		margin-right: 0.8rem;
+		border-radius: 50%;
 	}
 
 	nav {

@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Contact | Aura Handcrafted</title>
+	<title>Contact | Petrichor</title>
 </svelte:head>
 
 <section class="container page-header">
@@ -11,7 +11,7 @@
 	<div class="contact-wrapper">
 		<div class="contact-info">
 			<h2>Our Studio</h2>
-			<p><strong>Email:</strong> hello@aurahandcrafted.com</p>
+			<p><strong>Email:</strong> hello@petrichor.com</p>
 			<p><strong>Hours:</strong> Mon - Fri, 9am - 5pm</p>
 			<div class="socials">
 				<p>Follow our journey on social media:</p>

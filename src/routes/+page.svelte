@@ -1,11 +1,17 @@
+<script>
+	import sample1 from '$lib/assets/Sample1.jpg';
+	import sample2 from '$lib/assets/Sample2.jpg';
+	import sample3 from '$lib/assets/Sample3.jpg';
+</script>
+
 <svelte:head>
-	<title>Aura Handcrafted | Beautiful Artisan Jewelry</title>
+	<title>Petrichor | Beautiful Artisan Jewelry</title>
 </svelte:head>
 
 <section class="hero">
 	<div class="hero-content">
 		<h1>Elegance in Every Detail</h1>
-		<p>Discover unique, handmade jewelry designed to highlight your natural aura.</p>
+		<p>Discover unique, handmade jewelry designed to highlight your natural style.</p>
 		<a href="/shop" class="btn">Shop the Collection</a>
 	</div>
 </section>
@@ -14,12 +20,8 @@
 	<h2>Featured Pieces</h2>
 	<div class="grid">
 		<div class="card">
-			<div class="placeholder-img ring">
-				<!-- SVG representation of a ring -->
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<circle cx="50" cy="50" r="30" stroke="var(--color-primary)" stroke-width="6"/>
-					<polygon points="50,15 55,25 45,25" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample1} alt="Rose Quartz Ring" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Rose Quartz Ring</h3>
@@ -27,12 +29,8 @@
 			</div>
 		</div>
 		<div class="card">
-			<div class="placeholder-img necklace">
-				<!-- SVG representation of a necklace -->
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20,30 Q50,90 80,30" stroke="var(--color-primary)" stroke-width="4" fill="none"/>
-					<circle cx="50" cy="61" r="8" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample2} alt="Delicate Gold Chain" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Delicate Gold Chain</h3>
@@ -40,14 +38,8 @@
 			</div>
 		</div>
 		<div class="card">
-			<div class="placeholder-img earrings">
-				<!-- SVG representation of earrings -->
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<line x1="40" y1="20" x2="40" y2="60" stroke="var(--color-primary)" stroke-width="3"/>
-					<line x1="60" y1="20" x2="60" y2="60" stroke="var(--color-primary)" stroke-width="3"/>
-					<circle cx="40" cy="65" r="6" fill="var(--color-accent)"/>
-					<circle cx="60" cy="65" r="6" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample3} alt="Drop Pearl Earrings" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Drop Pearl Earrings</h3>
@@ -60,7 +52,7 @@
 <section class="about-teaser">
 	<div class="container teaser-content">
 		<h2>The Maker's Story</h2>
-		<p>Every piece at Aura is thoughtfully designed and handcrafted in our small studio. We believe in sustainable practices and the beauty of slow fashion. Our materials are ethically sourced, and our designs are meant to be cherished for a lifetime.</p>
+		<p>Every piece at Petrichor is thoughtfully designed and handcrafted in our small studio. We believe in sustainable practices and the beauty of slow fashion. Our materials are ethically sourced, and our designs are meant to be cherished for a lifetime.</p>
 		<a href="/about" class="btn btn-secondary">Read More</a>
 	</div>
 </section>
@@ -113,18 +105,22 @@
 		transform: translateY(-5px);
 	}
 
-	.placeholder-img {
+	.card-img-container {
 		height: 250px;
-		background-color: var(--color-bg);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		width: 100%;
+		overflow: hidden;
 		border-bottom: 1px solid #eee;
 	}
 	
-	.placeholder-img svg {
-		width: 100px;
-		height: 100px;
+	.card-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.5s ease;
+	}
+
+	.card:hover .card-img {
+		transform: scale(1.05);
 	}
 
 	.card-info {

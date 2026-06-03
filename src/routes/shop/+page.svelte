@@ -1,5 +1,14 @@
+<script>
+	import sample1 from '$lib/assets/Sample1.jpg';
+	import sample2 from '$lib/assets/Sample2.jpg';
+	import sample3 from '$lib/assets/Sample3.jpg';
+	import sample4 from '$lib/assets/Sample4.jpg';
+	import sample5 from '$lib/assets/Sample5.png';
+	import sample6 from '$lib/assets/Sample6.png';
+</script>
+
 <svelte:head>
-	<title>Shop | Aura Handcrafted</title>
+	<title>Shop | Petrichor</title>
 </svelte:head>
 
 <section class="container page-header">
@@ -11,11 +20,8 @@
 	<div class="grid">
 		<!-- Item 1 -->
 		<div class="card">
-			<div class="placeholder-img">
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<circle cx="50" cy="50" r="30" stroke="var(--color-primary)" stroke-width="6"/>
-					<polygon points="50,15 55,25 45,25" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample1} alt="Rose Quartz Ring" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Rose Quartz Ring</h3>
@@ -25,11 +31,8 @@
 
 		<!-- Item 2 -->
 		<div class="card">
-			<div class="placeholder-img">
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20,30 Q50,90 80,30" stroke="var(--color-primary)" stroke-width="4" fill="none"/>
-					<circle cx="50" cy="61" r="8" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample2} alt="Delicate Gold Chain" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Delicate Gold Chain</h3>
@@ -39,13 +42,8 @@
 
 		<!-- Item 3 -->
 		<div class="card">
-			<div class="placeholder-img">
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<line x1="40" y1="20" x2="40" y2="60" stroke="var(--color-primary)" stroke-width="3"/>
-					<line x1="60" y1="20" x2="60" y2="60" stroke="var(--color-primary)" stroke-width="3"/>
-					<circle cx="40" cy="65" r="6" fill="var(--color-accent)"/>
-					<circle cx="60" cy="65" r="6" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample3} alt="Drop Pearl Earrings" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Drop Pearl Earrings</h3>
@@ -55,11 +53,8 @@
 
 		<!-- Item 4 -->
 		<div class="card">
-			<div class="placeholder-img">
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect x="35" y="35" width="30" height="30" rx="5" stroke="var(--color-primary)" stroke-width="4" fill="none"/>
-					<circle cx="50" cy="50" r="5" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample4} alt="Geometric Studs" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Geometric Studs</h3>
@@ -69,10 +64,8 @@
 
 		<!-- Item 5 -->
 		<div class="card">
-			<div class="placeholder-img">
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M30,30 L70,30 L50,70 Z" stroke="var(--color-primary)" stroke-width="4" fill="none"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample5} alt="Triangle Pendant" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Triangle Pendant</h3>
@@ -82,11 +75,8 @@
 
 		<!-- Item 6 -->
 		<div class="card">
-			<div class="placeholder-img">
-				<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<ellipse cx="50" cy="50" rx="40" ry="25" stroke="var(--color-primary)" stroke-width="4" fill="none"/>
-					<circle cx="50" cy="50" r="10" fill="var(--color-accent)"/>
-				</svg>
+			<div class="card-img-container">
+				<img src={sample6} alt="Halo Bracelet" class="card-img" />
 			</div>
 			<div class="card-info">
 				<h3>Halo Bracelet</h3>
@@ -133,18 +123,22 @@
 		transform: translateY(-5px);
 	}
 
-	.placeholder-img {
+	.card-img-container {
 		height: 280px;
-		background-color: var(--color-bg);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		width: 100%;
+		overflow: hidden;
 		border-bottom: 1px solid #eee;
 	}
 	
-	.placeholder-img svg {
-		width: 120px;
-		height: 120px;
+	.card-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.5s ease;
+	}
+
+	.card:hover .card-img {
+		transform: scale(1.05);
 	}
 
 	.card-info {
