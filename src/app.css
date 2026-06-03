@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+	/* Rose Tan Theme Palette */
+	--color-primary: #D4B5B0;
+	--color-accent: #A97C76;
+	--color-bg: #FAF6F5;
+	--color-text: #4A3B39;
+	--color-white: #FFFFFF;
+	
+	/* Typography */
+	--font-heading: 'Playfair Display', serif;
+	--font-body: 'Lato', sans-serif;
+}
+
+/* Reset and Globals */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-body);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+	font-weight: 400;
+	margin-bottom: 1rem;
+	color: var(--color-text);
+}
+
+a {
+	color: var(--color-accent);
+	text-decoration: none;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+/* Common UI Elements */
+.btn {
+	display: inline-block;
+	background-color: var(--color-accent);
+	color: var(--color-white);
+	padding: 0.75rem 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 0.9rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background-color: #8c645e;
+	transform: translateY(-2px);
+}
+
+.btn-secondary {
+	background-color: transparent;
+	color: var(--color-accent);
+	border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	border-color: var(--color-primary);
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* Section Spacing */
+section {
+	padding: 5rem 0;
+}
